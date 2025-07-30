@@ -1,13 +1,12 @@
+# 🏏 IPL First Innings Score Predictor using Machine Learning
 
-# 🏏 IPL Winning Team Predictor using Machine Learning
-
-This project was completed as part of my **AI/ML Internship** at **InternPe**. The task involved building and deploying a machine learning model that predicts the **winning team** in an IPL match based on real-time match statistics like score, overs, wickets, and more.
+This project was completed as part of my **AI/ML Internship** at **InternPe**. The task involved building and deploying a machine learning model that predicts the **final score** in the **first innings** of an IPL match using real-time match inputs like runs, overs, wickets, and recent performance.
 
 ---
 
 ## 📌 Task Objective
 
-Develop and deploy a **classification/regression-based machine learning model** to predict the outcome of an IPL match using historical ball-by-ball data. The final solution is deployed as an interactive **Streamlit web application**.
+Develop and deploy a **regression-based ML model** to forecast the total score in the **first innings** of an IPL match. The final solution includes a **Streamlit-powered web application** that accepts real-time match inputs and returns a live score prediction.
 
 ---
 
@@ -18,36 +17,33 @@ Develop and deploy a **classification/regression-based machine learning model** 
 - Pandas  
 - NumPy  
 - scikit-learn  
-  - Random Forest Regressor (for score prediction)  
-  - Train-Test Split, Evaluation Metrics  
-- Matplotlib / Seaborn (for EDA)  
+  - Random Forest Regressor  
+  - Train-Test Split  
+  - Evaluation Metrics  
 - Jupyter Notebook  
-- Pickle & JSON (for model & feature saving)
+- Pickle / JSON (for model saving)
 
 ---
 
 ## 📁 Project Structure
 
-```
-
-ipl-winning-predictor/
+ipl-first-innings-predictor/
 │
-├── IPL\_WinningPrediction.ipynb       # Jupyter Notebook for model training
-├── ipl\_colab.xlsx                    # Raw IPL dataset
-├── ipl\_score\_predictor.pkl           # Trained ML model
-├── model\_features.json               # Feature columns used in training
-├── app.py                            # Streamlit app for prediction
-├── README.md                         # Project documentation
+├── IPL_WinningPrediction.ipynb # Jupyter Notebook for model training
+├── ipl_colab.xlsx # Raw IPL dataset
+├── ipl_score_predictor.pkl # Trained ML model
+├── model_features.json # Feature columns used in training
+├── app.py # Streamlit web app for predictions
+├── README.md # Project documentation
 
-```
 
 ---
 
 ## 🏏 Dataset Description
 
-The dataset contains ball-by-ball details of IPL matches from 2008 onwards. Extracted and cleaned to create useful features for modeling.
+The dataset includes ball-by-ball information for IPL matches between 2008–2023, processed into innings-level data.
 
-Key Features Used:
+Key features used for prediction:
 
 - `runs`, `wickets`, `overs`  
 - `runs_last_5`, `wickets_last_5`  
@@ -58,39 +54,37 @@ Key Features Used:
 
 ## 🔄 ML Workflow
 
-1. **Data Cleaning** – Filter consistent teams and match dates  
-2. **Feature Engineering** – Extract innings-level statistics  
-3. **Encoding** – One-hot encode categorical features  
-4. **Model Training** – Trained a `RandomForestRegressor` to predict total score  
-5. **Model Saving** – Saved using `pickle` and `json`  
-6. **Web Deployment** – Streamlit app for real-time prediction
+1. Data cleaning and filtering consistent teams  
+2. One-hot encoding of team names  
+3. Feature selection based on match state  
+4. Model training with `RandomForestRegressor`  
+5. Model saving (`pickle`) and feature saving (`json`)  
+6. Web interface using Streamlit for real-time prediction
 
 ---
 
 ## 🖥️ Web App Features
 
-- Select **Batting Team** and **Bowling Team**  
-- Enter **Runs, Wickets, Overs**, and **Last 5 Overs Stats**  
-- Choose **Match Date**  
-- Get:
-  - 🎯 Predicted Final Score  
-  - 🏆 Likely Winning Team  
-- Clean and modern UI built using Streamlit
+- Input real-time match stats: runs, overs, wickets, etc.  
+- Select teams and match date  
+- Predict the **final score for the first innings**  
+- Displays likely winning team based on the predicted total  
+- User-friendly UI with intuitive input widgets
 
 ---
 
 ## 📷 Screenshot
 
-![App Screenshot](IPLWinningPredictor.png) <!-- Add your screenshot filename here -->
+![App Screenshot](IPLFirstInningsPredictor.png) <!-- Add a screenshot if available -->
 
 ---
 
 ## 🔧 Future Scope
 
-- Train a classifier model for **win probability** (instead of score)
-- Add second innings logic for deeper match analysis  
-- Enhance visualizations (run rate graph, win % chart)  
-- Deploy online (Streamlit Cloud, Hugging Face Spaces)
+- Build separate predictor for second innings chase outcomes  
+- Add run rate comparison visuals  
+- Deploy online using Streamlit Cloud or Hugging Face  
+- Enhance UI styling and animations
 
 ---
 
@@ -98,7 +92,7 @@ Key Features Used:
 
 - **Internship Track**: Artificial Intelligence & Machine Learning  
 - **Internship Provider**: InternPe  
-- **Task Name**: Task 03 – IPL Winning Team Predictor  
+- **Task Name**: Task 03 – IPL First Innings Score Predictor  
 - **Environment**: Jupyter Notebook + Streamlit App (Local)
 
 ---
@@ -108,5 +102,3 @@ Key Features Used:
 **Difina George**  
 📧 difina.georgecs@gmail.com  
 📍 Kerala, India
-
-
