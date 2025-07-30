@@ -26,7 +26,7 @@ Develop and deploy a **regression-based ML model** to forecast the total score i
 ---
 
 ## 📁 Project Structure
-
+```
 ipl-first-innings-predictor/
 │
 ├── IPL_WinningPrediction.ipynb # Jupyter Notebook for model training
@@ -36,7 +36,7 @@ ipl-first-innings-predictor/
 ├── app.py # Streamlit web app for predictions
 ├── README.md # Project documentation
 
-
+```
 ---
 
 ## 🏏 Dataset Description
