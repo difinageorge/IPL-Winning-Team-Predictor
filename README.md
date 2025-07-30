@@ -75,8 +75,8 @@ Key features used for prediction:
 
 ## 📷 Screenshot
 
-![App Screenshot](IPLFirstInningsPredictor.png) <!-- Add a screenshot if available -->
-
+![App Screenshot](SS01.png) 
+![App Screenshot](SS02.png) 
 ---
 
 ## 🔧 Future Scope
